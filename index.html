@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentify - Your Perfect Rental Home Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rentify</h1>
+
+    <!-- User Registration Form -->
+    <h2>User Registration</h2>
+    <form id="user-registration-form">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="firstname" required>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lastname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <small>Format: 123-456-7890</small>
+
+      <label for="usertype">User Type:</label>
+      <select id="usertype" name="usertype" required>
+        <option value="">Select User Type</option>
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+      </select>
+
+      <input type="submit" value="Register">
+    </form>
+
+    <!-- Seller Property Management -->
+    <h2>Seller Property Management</h2>
+    <!-- Property Posting Form -->
+    <form id="property-form">
+      <label for="area">Area:</label>
+      <input type="text" id="area" name="area" required>
+
+      <label for="bedrooms">Number of Bedrooms:</label>
+      <input type="number" id="bedrooms" name="bedrooms" required>
+
+      <label for="hospitals">Nearby Hospitals:</label>
+      <input type="text" id="hospitals" name="hospitals" required>
+
+      <label for="colleges">Nearby Colleges:</label>
+      <input type="text" id="colleges" name="colleges" required>
+
+      <input type="submit" value="Post Property">
+    </form>
+
+    <!-- Buyer Property Search -->
+    <h2>Buyer Property Search</h2>
+    <!-- Filter Form -->
+    <form class="filter-form">
+      <label for="area-filter">Filter by Area:</label>
+      <select id="area-filter">
+        <option value="">Any Area</option>
+        <option value="downtown">Downtown</option>
+        <option value="suburb">Suburb</option>
+        <option value="rural">Rural</option>
+      </select>
+
+      <label for="bedrooms-filter">Filter by Number of Bedrooms:</label>
+      <select id="bedrooms-filter">
+        <option value="">Any Bedrooms</option>
+        <option value="1">1 Bedroom</option>
+        <option value="2">2 Bedrooms</option>
+        <option value="3">3 Bedrooms</option>
+      </select>
+
+      <input type="submit" value="Apply Filters">
+    </form>
+
+    <!-- List of Posted Properties -->
+    <h3>Posted Properties</h3>
+    <ul class="property-list" id="property-list">
+      <li class="property">
+        <div class="property-details">
+          <h2>Property Title</h2>
+          <p>Area:Downtown</p>
+          <p>Bedrooms: 2</p>
+          <p>Nearby Hospitals: Hospital A</p>
+          <p>Nearby Colleges: College A</p>
+        </div>
+        <div class="property-actions">
+          <button class="interested-btn">I'm Interested</button>
+        </div>
+      </li>
+      <!-- Additional properties will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
